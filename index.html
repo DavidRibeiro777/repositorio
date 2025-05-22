@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Ribeiro | Landing Pages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+
+    /* Animação simples para clique */
+    @keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes clickScale {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 0.8s ease-out both;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out both;
+}
+
+.animate-click {
+  animation: clickScale 0.2s ease forwards;
+}
+
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-5">
+      <!-- Logo + nome + tagline -->
+      <div class="flex items-center space-x-4">
+        <img src="img/logo.png" alt="Logo David Ribeiro" class="h-12 w-auto">
+        <div>
+          <span class="text-2xl font-semibold text-gray-900 tracking-wide">David Ribeiro</span>
+          <p class="text-sm text-gray-500 font-light">Landing Pages Modernas & Eficientes</p>
+        </div>
+      </div>
+
+      <!-- Navegação desktop -->
+      <nav class="hidden md:flex space-x-8 text-lg font-medium text-gray-700">
+        <a href="#sobre" class="hover:text-yellow-500 transition border-b-2 border-transparent hover:border-yellow-500 pb-1">Sobre</a>
+        <a href="#servicos" class="hover:text-yellow-500 transition border-b-2 border-transparent hover:border-yellow-500 pb-1">Serviços</a>
+        <a href="#portfolio" class="hover:text-yellow-500 transition border-b-2 border-transparent hover:border-yellow-500 pb-1">Portfólio</a>
+        <a href="#contato" class="hover:text-yellow-500 transition border-b-2 border-transparent hover:border-yellow-500 pb-1">Contato</a>
+      </nav>
+
+      <!-- Botão CTA no desktop -->
+      <a href="#contato" class="hidden md:inline-block bg-yellow-500 text-white font-semibold px-5 py-2 rounded-full hover:bg-yellow-600 transition shadow-lg">Solicitar Orçamento</a>
+      <!-- Botão hamburguer para mobile -->
+      <button id="btn-mobile-menu" class="md:hidden focus:outline-none" aria-label="Abrir menu" aria-expanded="false">
+        <!-- Ícone hamburguer -->
+        <svg id="icon-menu" class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <!-- Ícone X -->
+        <svg id="icon-close" class="w-8 h-8 text-gray-700 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu mobile dropdown -->
+    <nav id="dropdown-menu" class="bg-white shadow-md md:hidden hidden">
+      <div class="flex flex-col p-5 space-y-4">
+        <a href="#sobre" class="text-gray-700 hover:text-yellow-500 transition">Sobre</a>
+        <a href="#servicos" class="text-gray-700 hover:text-yellow-500 transition">Serviços</a>
+        <a href="#portfolio" class="text-gray-700 hover:text-yellow-500 transition">Portfólio</a>
+        <a href="#contato" class="text-gray-700 hover:text-yellow-500 transition">Contato</a>
+        <a href="#contato" class="bg-yellow-400 text-white px-5 py-3 rounded-full text-center font-semibold hover:bg-yellow-500 transition shadow-lg">Solicitar Orçamento</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+ <!-- Hero -->
+<section class="bg-gradient-to-r from-yellow-500 to-yellow-400 py-20 text-center shadow-inner">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-5xl font-extrabold tracking-wide mb-4">Landing Pages Profissionais para o Seu Negócio</h2>
+      <p class="text-lg leading-relaxed mb-6">Crie presença online com páginas rápidas, responsivas e sem complicações.</p>
+      <a href="#contato" class="bg-gray-900 text-white px-6 py-3 rounded-full hover:bg-gray-800 transition shadow-lg">Solicitar Orçamento</a>
+    </div>
+  </section>
+  
+  <!-- Sobre -->
+<section id="sobre" class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h3 class="text-4xl font-extrabold tracking-wide mb-4 animate-fade-in-down">Quem sou eu?</h3>
+      <p class="text-lg leading-relaxed text-gray-700 animate-fade-in-up">
+        Oi, sou <span class="font-semibold">David Ribeiro</span>, desenvolvedor focado na criação de landing pages modernas, rápidas e eficientes.  
+        Acredito que todo negócio merece uma presença online que transmita <span class="text-yellow-500 font-semibold">profissionalismo</span> e gere resultados reais.  
+        Estou aqui para ajudar você a transformar visitantes em clientes com páginas elegantes, responsivas e feitas sob medida.
+      </p>
+    </div>
+  </section>
+  
+  
+  <!-- Serviços -->
+<section id="servicos" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-4xl font-extrabold tracking-wide text-center mb-12 animate-fade-in-down">
+        O que eu ofereço
+      </h3>
+  
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <!-- Card 1 -->
+        <div class="bg-gray-50 p-6 shadow-md rounded-2xl transition-transform duration-300 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up">
+          <div class="text-yellow-500 mb-4">
+            <!-- Ícone responsivo -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <h4 class="text-2xl font-bold mb-2">Landing Page Responsiva</h4>
+          <p class="text-base leading-relaxed text-gray-700">
+            Páginas que funcionam perfeitamente em celulares, tablets e desktops.
+          </p>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="bg-gray-50 p-6 shadow-md rounded-2xl transition-transform duration-300 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up delay-100">
+          <div class="text-yellow-500 mb-4">
+            <!-- Ícone design -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </div>
+          <h4 class="text-2xl font-bold mb-2">Design Personalizado</h4>
+          <p class="text-base leading-relaxed text-gray-700">
+            Criação visual sob medida para destacar sua marca ou serviço.
+          </p>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="bg-gray-50 p-6 shadow-md rounded-2xl transition-transform duration-300 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up delay-200">
+          <div class="text-yellow-500 mb-4">
+            <!-- Ícone entrega -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11l4 8H7l-4-8zm0 0l2-4h10l2 4" />
+            </svg>
+          </div>
+          <h4 class="text-2xl font-bold mb-2">Entrega Rápida</h4>
+          <p class="text-base leading-relaxed text-gray-700">
+            Páginas entregues em poucos dias, prontas para serem publicadas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Portfólio -->
+<section id="portfolio" class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-4xl font-extrabold tracking-wide text-center mb-12 animate-fade-in-down">
+        Exemplos de Projetos
+      </h3>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Projeto 1 -->
+        <div class="bg-white rounded-2xl shadow-md hover:shadow-lg transition duration-300 transform hover:scale-[1.02] animate-fade-in-up">
+          <div class="h-48 bg-cover bg-center rounded-t-2xl mb-4" style="background-image: url('https://via.placeholder.com/400x200?text=Projeto+1');"></div>
+          <div class="px-6 pb-6 text-center">
+            <h4 class="text-2xl font-bold mb-2">Projeto 1</h4>
+            <p class="text-base leading-relaxed text-gray-600">Landing page para produto digital</p>
+          </div>
+        </div>
+  
+        <!-- Projeto 2 -->
+        <div class="bg-white rounded-2xl shadow-md hover:shadow-lg transition duration-300 transform hover:scale-[1.02] animate-fade-in-up delay-100">
+          <div class="h-48 bg-cover bg-center rounded-t-2xl mb-4" style="background-image: url('https://via.placeholder.com/400x200?text=Projeto+2');"></div>
+          <div class="px-6 pb-6 text-center">
+            <h4 class="text-2xl font-bold mb-2">Projeto 2</h4>
+            <p class="text-base leading-relaxed text-gray-600">Página para prestador de serviços</p>
+          </div>
+        </div>
+  
+        <!-- Projeto 3 -->
+        <div class="bg-white rounded-2xl shadow-md hover:shadow-lg transition duration-300 transform hover:scale-[1.02] animate-fade-in-up delay-200">
+          <div class="h-48 bg-cover bg-center rounded-t-2xl mb-4" style="background-image: url('https://via.placeholder.com/400x200?text=Projeto+3');"></div>
+          <div class="px-6 pb-6 text-center">
+            <h4 class="text-2xl font-bold mb-2">Projeto 3</h4>
+            <p class="text-base leading-relaxed text-gray-600">Evento com formulário de inscrição</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+<!-- Contato -->
+<section id="contato" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h3 class="text-4xl font-extrabold tracking-wide mb-6 animate-fade-in-down">
+        Vamos trabalhar juntos?
+      </h3>
+      <p class="text-lg leading-relaxed mb-6 text-gray-700 animate-fade-in-up">
+        Entre em contato comigo no WhatsApp clicando no botão abaixo!
+      </p>
+  
+      <a href="https://wa.me/1994772654"
+         class="inline-flex items-center gap-2 bg-green-500 text-white text-lg font-medium px-6 py-3 rounded-full shadow-md hover:bg-green-600 transition transform active:scale-95 animate-click"
+         target="_blank"
+      >
+        <!-- Ícone WhatsApp (opcional) -->
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20 3.5A10.5 10.5 0 0 0 3.5 20l-1.4 4.3 4.4-1.4A10.5 10.5 0 1 0 20 3.5zm-5.3 13.2c-.9.3-1.8.4-2.7.2-2.4-.4-4.8-2.3-5.5-4.7-.3-1-.2-1.9.2-2.8.1-.2.2-.3.4-.3h.8c.2 0 .4.1.5.3l1 2.2c.1.2 0 .4-.2.5l-.5.4c.6 1 1.6 1.8 2.6 2.1l.3-.5c.1-.2.3-.2.5-.1l2.2 1c.2.1.3.3.3.5v.8c0 .1-.1.3-.3.4z"/>
+        </svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </section>
+  
+
+  <!-- Rodapé -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="text-sm tracking-wide mb-4">&copy; <span id="ano-atual">2025</span> David Ribeiro — Todos os direitos reservados.</p>
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script>
+    const btnMenu = document.getElementById('btn-mobile-menu');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    const iconMenu = document.getElementById('icon-menu');
+    const iconClose = document.getElementById('icon-close');
+
+    btnMenu.addEventListener('click', () => {
+      const isExpanded = btnMenu.getAttribute('aria-expanded') === 'true';
+      btnMenu.setAttribute('aria-expanded', !isExpanded);
+      dropdownMenu.classList.toggle('hidden');
+      iconMenu.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+    });
+
+    dropdownMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    dropdownMenu.classList.add('hidden');
+    iconMenu.classList.remove('hidden');
+    iconClose.classList.add('hidden');
+    btnMenu.setAttribute('aria-expanded', 'false');
+  });
+});
+
+
+    // Função que adiciona a animação no clique e scroll suave para links internos
+    function adicionarAnimacaoClique(element) {
+      element.addEventListener('click', (e) => {
+        e.preventDefault(); // prevenir ação imediata
+        element.classList.add('animate-click');
+
+        setTimeout(() => {
+          element.classList.remove('animate-click');
+
+          const href = element.getAttribute('href');
+
+          if (href.startsWith('#')) {
+            // Scroll suave para o elemento alvo
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth' });
+            }
+          } else {
+            // Para links externos (ex: WhatsApp), faz o redirecionamento normal
+            window.location.href = href;
+          }
+        }, 200);
+      });
+    }
+
+    // Adicionar animação em todos os links que tem href (menu, botões, etc)
+    document.querySelectorAll('a[href]').forEach(adicionarAnimacaoClique);
+   
+  document.getElementById("ano-atual").textContent = new Date().getFullYear();
+
+
+  </script>
+
+</body>
+</html>
